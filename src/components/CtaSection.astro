@@ -5,13 +5,28 @@
   <div class="mx-auto max-w-3xl px-6">
     <h2 class="text-3xl md:text-4xl font-heading font-extrabold text-ink dark:text-[#fafaf9] mb-4">Ready to stop Googling and start building?</h2>
     <p class="text-lg text-ink/75 dark:text-[#d6d3d1] font-body max-w-md mx-auto mb-8">
-      Book a 60-minute AI Clarity Call. Bring your idea. I'll give you straight answers on what it takes to make it real.
+      Book a free 30-minute Insights Call. Bring your idea. Get two powerful lenses on your project: ~25yrs of software engineering and 2yrs of AI Systems Development.
     </p>
-    <a href="https://calendly.com/YOUR-LINK" class="inline-block font-heading font-semibold text-lg bg-accent dark:bg-[#f59e0b] text-white dark:text-[#0c0a09] px-8 py-4 rounded-xl shadow-sm hover:bg-accent-hover dark:hover:bg-[#fbbf24] hover:-translate-y-0.5 transition-all">
-      Book Your Clarity Call — $297
+    <a href="https://calendly.com/wunlove/30min" class="inline-block font-body font-semibold text-xs uppercase tracking-wide bg-accent dark:bg-[#f59e0b] text-white dark:text-[#0c0a09] px-8 py-4 rounded-xl shadow-sm hover:bg-accent-hover dark:hover:bg-[#fbbf24] hover:-translate-y-0.5 transition-all">
+      Book Your Free Insights Call
     </a>
-    <p class="mt-4 text-base text-muted dark:text-[#a8a29e] font-body">
-      Or email me at <a href="mailto:hello@sannaidoo.com" class="text-accent dark:text-[#f59e0b] hover:underline underline-offset-2">hello@sannaidoo.com</a>
+    <p class="mt-4 text-base text-muted dark:text-[#a8a29e] font-body" id="email-contact">
+      Or reach me at <span class="text-accent dark:text-[#f59e0b]">san&#64;khanyi&#46;com</span>
     </p>
   </div>
 </section>
+
+<script>
+  // Spam-protected email: decode at runtime
+  const el = document.getElementById('email-contact');
+  if (el) {
+    const user = 'san';
+    const domain = 'khanyi.com';
+    const anchor = document.createElement('a');
+    anchor.href = `mailto:${user}@${domain}`;
+    anchor.className = 'text-accent dark:text-[#f59e0b] hover:underline underline-offset-2';
+    anchor.textContent = `${user}@${domain}`;
+    el.innerHTML = 'Or reach me at ';
+    el.appendChild(anchor);
+  }
+</script>

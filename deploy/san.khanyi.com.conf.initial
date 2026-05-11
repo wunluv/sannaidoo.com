@@ -1,0 +1,20 @@
+# HTTP-only config for san.khanyi.com (initial cert generation)
+server {
+    listen 80;
+    listen [::]:80;
+    server_name san.khanyi.com;
+
+    # Let's Encrypt validation location
+    location /.well-known/acme-challenge/ {
+        root /var/www/public;
+        allow all;
+    }
+
+    # Temporary: serve static files while we get certs
+    root /var/www/public/san.khanyi.com;
+    index index.html index.htm;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
