@@ -1,0 +1,23 @@
+---
+const pains = [
+  'You have an AI product idea but don\'t know where to start technically',
+  'You\'re overwhelmed by model choices, costs, and conflicting advice',
+  'You\'ve spoken to developers who can code but don\'t understand your business',
+  'You need someone who sees the full picture — not just the code',
+  'Your company needs AI but you can\'t send sensitive data to public APIs',
+];
+---
+
+<section class="py-16 border-t border-border dark:border-[#292524]">
+  <div class="mx-auto max-w-3xl px-6">
+    <h2 class="text-2xl md:text-3xl font-heading font-bold text-ink dark:text-[#fafaf9] mb-8">Sound familiar?</h2>
+    <ul class="divide-y divide-border dark:divide-[#292524]">
+      {pains.map((pain) => (
+        <li class="py-4 flex items-start gap-3 text-base md:text-lg text-ink/75 dark:text-[#d6d3d1] font-body">
+          <span class="text-accent dark:text-[#f59e0b] font-bold shrink-0 mt-0.5">&rarr;</span>
+          {pain}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,67 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+const services = [
+  {
+    tag: 'Starting Point',
+    title: 'AI Clarity Call',
+    price: '$297 — 60 minutes',
+    description: "Bring your idea. I'll break down what's technically feasible, what it costs to build, and what your next steps should be. Straight answers, no jargon.",
+    features: [
+      'Technical feasibility assessment',
+      'Rough cost estimate (build + ongoing)',
+      'Clear next steps — with me or without me',
+    ],
+  },
+  {
+    tag: 'Most Popular',
+    title: 'AI Architecture Blueprint',
+    price: '$3,000–$5,000 — 2 weeks',
+    description: 'A complete technical and business roadmap for your AI product. Not a vague proposal — a detailed blueprint any developer can execute.',
+    features: [
+      'Model selection & cost modeling at scale',
+      'Full system architecture',
+      'Implementation roadmap with timelines',
+      'Build vs. buy analysis',
+      'Revenue model recommendations',
+      'Risk assessment & mitigation strategy',
+    ],
+  },
+  {
+    tag: 'For Committed Founders',
+    title: 'AI Build Partnership',
+    price: '$5,000–$10,000/month',
+    description: "I don't just plan it — I build it with you. Architecture, development, and ongoing advisory as a technical partner embedded in your team.",
+    features: [
+      'Hands-on development of core AI systems',
+      'Weekly strategy sessions',
+      'Direct access for real-time questions',
+      'Iterative architecture as your product scales',
+      'Limited to 2-3 concurrent partnerships',
+    ],
+  },
+  {
+    tag: 'Enterprise',
+    title: 'Private AI Pipeline',
+    price: '$15,000–$25,000 — 4-8 weeks',
+    description: "Fully private, compliant AI infrastructure for organizations that can't send data to public APIs. Healthcare, finance, legal, government.",
+    features: [
+      'Self-hosted model deployment',
+      'Compliance-aligned pipeline design (POPIA, GDPR)',
+      'Data governance framework',
+      'Team training & documentation',
+    ],
+  },
+];
+---
+
+<section id="services" class="py-16 border-t border-border dark:border-[#292524]">
+  <div class="mx-auto max-w-3xl px-6">
+    <h2 class="text-2xl md:text-3xl font-heading font-bold text-ink dark:text-[#fafaf9] mb-10">How I can help</h2>
+    <div class="space-y-6">
+      {services.map((service) => (
+        <ServiceCard {...service} />
+      ))}
+    </div>
+  </div>
+</section>
